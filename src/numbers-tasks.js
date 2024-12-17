@@ -645,8 +645,8 @@ function getHypotenuse(a, b) {
  */
 function getCountOfOddNumbers(number) {
   let count = 0;
-  const start = number > 0 ? 0 : number;
-  const end = number > 0 ? number : 0;
+  const start = Math.min(number, 0);
+  const end = Math.max(number, 0);
   for (let i = start; i <= end; i += 1) {
     if (i % 2 !== 0) {
       count += 1;
